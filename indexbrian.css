@@ -240,6 +240,10 @@ h2 {
     border-radius: 15px;
 }
 
+.career-section p {
+  font-size: clamp(12px, 1.8vw, 18px);
+}
+
 .video-intro {
     margin-bottom: 25px;
     font-style: italic;
