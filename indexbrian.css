@@ -194,7 +194,7 @@ h2 {
 
 .about-details strong {
     color: var(--accent-color);
-    font-size: clamp(12px, 1.6w, 22px);
+    font-size: clamp(12px, 1.6vw, 22px);
 }
 
 .about-section {
