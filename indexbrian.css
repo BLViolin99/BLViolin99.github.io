@@ -228,7 +228,7 @@ h2 {
 }*/
 
 .about-section strong {
-    color: var(--heading-color);
+    color: var(--accent-color);
 }
 
 .career-section,
