@@ -1,452 +1,273 @@
-
-/* Fonts */
-:root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: Arial, Helvetica, sans-serif;
-  --nav-font: "Raleway",  sans-serif;
-  --other-font: Times;
-}
-
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root {
-    --background-color: #25303f;
-    --default-color: #f3f4f6;
-    --heading-color: #d3e6f8;
-    --accent-color: #1bc98c;
-    --surface-color: #4a586b;
-    --contrast-color: #1f2937;
-}
-
-@media (max-width: 700px) {
-    #navmenu ul {
-        gap: 5px;
-    }
-
-    }
-    .about-details {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .about-content {
-        padding: 25px;
-    }
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    padding-top: 60px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--surface-color);
-}
-
-.home-body {
-    display: flex;
-    min-height: 100vh;
-    margin: 0;
-    background-color: rgb(148, 163, 171);
-    justify-content: center;
-    justify-items: center;
-    flex-direction: column;
-    position: relative;
-}
-
-.home-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("images/Art-photo.jpg");
-    background-size: cover;
-    background-position: center;
-    opacity: 0.14;
-    z-index: -1;
-}
-
-.button-row {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    gap: 50px;
-    margin: 40px;
-    text-decoration: none;
-}
-
-.button-row button {
-    display: block;
-    background-color: bisque;
-    font-size: 40px;
-    color: maroon;
-    padding: 10px 20px;
-    text-align: center;
-    justify-content: center;
-    justify-items: center;
-}
-
-.button-row a {
-    text-decoration: none;
-}
-
-/*.photo-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    max-width: 800px;
-    margin: 40px auto 0;
-}*/
-
-
-/* Navigation bar */
-#navmenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #25303f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Remove default list formatting */
-#navmenu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: clamp(14px, 4vw, 50px);
-}
-
-/* Navigation links */
-#navmenu a {
-    color: #9bb5e7;
-    text-decoration: none;
-    font-size: clamp(14px, 2vw, 21px);
-    font-family: var(--heading-font);
-    padding: 8px 10px;
-}
-
-/* Mouse over a link */
-#navmenu a:hover {
-    color: #22e7a1;
-}
-
-/* Currently active link */
-#navmenu a.active {
-    color: #22e7a1;
-}
-
-h1 {
-    display: flex;
-    margin: 5%;
-    justify-content: center;
-    justify-self: center;
-    font-size: 60px;
-    font-family: var(--heading-font);
-    color: black;
-}
-
-h2 {
-    font-family: var(--heading-font);
-    font-size: clamp(20px, 2vw, 36px);
-    color: var(--accent-color);
-}
-
-.profile-photo {
-    width: clamp(180px, 30vw, 350px);
-    height: auto;
-    margin-left: 30px;
-}
-
-.profile-photo1 {
-    width: clamp(100px, 30vw, 250px);
-    height: auto;
-    margin-left: 10px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
-    color: var(--accent-color);
-    font-size: clamp(24px, 4vw, 40px);
-}
-
-.about-details {
-    flex: 1;
-    min-width: 0;
-    gap: 20px;
-    margin-bottom: 10px;
-}
-
-.about-details p {
-    font-family: var(--other-font);
-    padding: clamp(6px, 2vw, 18px);
-    margin-bottom: 10px;
-    background-color: var(--background-color);
-    color: wheat;
-    font-size: clamp(8px, 4vw, 18px);
-    line-height: 1.6;
-}
-
-.about-details strong {
-    color: var(--accent-color);
-    font-size: clamp(12px, 1.6vw, 22px);
-}
-
-.about-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 80px 20px;
-    background-color: var(--background-color);
-    color: var(--default-color);
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: clamp(20px, 4vw, 40px);
-    background-color: var(--surface-color);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: clamp(15px, 3vw, 30px);
-}
-
-.about-section h3 {
-    color: var(--accent-color);
-    font-size: 24px;
-    margin-top: 0;
-}
-
-/*.about-section p {
-    line-height: 1.7;
-    font-size: 18px;
-}*/
-
-.about-section strong {
-    color: var(--accent-color);
-}
-
-.career-section,
-.collaboration-section,
-.video-section {
-    background-color: var(--surface-color);
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 15px;
-}
-
-.career-section p {
-    justify-content: center;
-    font-size: clamp(12px, 1.8vw, 18px);
-}
-
-.video-intro {
-    margin-bottom: 25px;
-    font-style: italic;
-    color: rgb(130, 222, 242);
-}
-
-.video-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.youtube-link {
-    display: flex;
-    flex-direction: column;
-    padding: 18px 20px;
-    background-color: var(--background-color);
-    border: 1px solid var(--accent-color);
-    border-radius: 10px;
-
-    color: var(--default-color);
-    text-decoration: none;
-
-    transition: 0.2s;
-}
-
-.youtube-link:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: translateY(-2px);
-}
-
-.video-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 6px;
-    color: rgb(232, 166, 175);
-}
-
-.video-description {
-    font-size: 17px;
-}
-
-  .contact {
-    width: 100%;
-    height: 40px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    font-size: 22px;
-  }
-
-
-.resume-section {
-max-width: 1000px;
-margin: 0 auto;
-padding: 80px 20px;
-}
-
-.resume-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 25px;
-}
-
-.resume-box {
-background-color: var(--surface-color);
-padding: 30px;
-border-radius: 15px;
-border: 1px solid rgba(34, 231, 161, 0.3);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-transition: transform 0.55s ease;
-}
-
-.resume-box:hover {
-    transform: scale(1.10) translateY(-5px);
-}
-
-.resume-box h3 {
-color: var(--accent-color);
-font-size: 22px;
-margin-top: 0;
-margin-bottom: 20px;
-}
-
-.resume-box ul {
-margin: 0;
-padding-left: 20px;
-}
-
-.resume-box li {
-color: var(--default-color);
-line-height: 1.6;
-margin-bottom: 12px;
-}
-
-.resume-box li {
-margin-bottom: 0;
-}
-
-.resume-box:hover li {
-    background: linear-gradient(90deg, rgb(231, 240, 210), rgb(222, 255, 180), rgb(162, 255, 167));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-/* Phone */
-@media (max-width: 700px) {
-.resume-grid {
-grid-template-columns: 1fr;
-}
-
-.resume-box {
-    padding: 25px;
-}
-}
-
-.contact-section {
-padding: 70px 20px 50px;
-background-color: var(--surface-color);
-text-align: center;
-}
-
-.contact-section .section-title {
-margin-bottom: 30px;
-}
-
-.contact-info {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 50px;
-margin-bottom: 30px;
-}
-
-.contact-info a {
-color: var(--default-color);
-text-decoration: none;
-font-size: 18px;
-transition: 0.2s;
-}
-
-.contact-info a {
-color: var(--accent-color);
-}
-
-.social-logos {
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 20px;
-}
-
-.social-logos img {
-width: 32px;
-height: 32px;
-object-fit: contain;
-transition: 0.2s;
-}
-
-.social-logos img {
-transform: scale(1.15);
-}
-
-@media (max-width: 600px) {
-
-    .about-section {
-        padding: 50px 10px;
-    }
-
-    .section-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-    }
-
-    .about-content {
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        border-radius: 15px;
-    }
-
-    .about-details {
-        width: 100%;
-    }
-
-    .about-details p {
-        padding: 10px 12px;
-        margin-bottom: 10px;
-        font-size: 14px;
-        line-height: 1.4;
-        border-radius: 8px;
-    }
-
-    .about-details strong {
-        font-size: 17px;
-    }
-
-    .profile-photo {
-        width: min(75vw, 280px);
-        margin-left: 0;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexbrian.css">
+    <title>Brian-index</title>
+</head>
+<body>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#person"><i class="nav"></i>Main ★</a></li>
+        <li><a href="#about"><i class="nav-about"></i>About 🎻</a></li>
+        <li><a href="#media"><i class="nav-about"></i>Media ▶</a></li>
+        <li><a href="#resume"><i class="nav-resume"></i> Bio ♙</a></li>
+        <li><a href="#contact"><i class="contact"></i> Contact ✉</a></li>
+        <li><a href="index.html"><i class = "nav"></i>Home ⌂</a></li>
+      </ul>
+    </nav>
+<section id="person" class="about-section">
+    <h2 class="section-title">VIOLINIST: Brian Larson</h2>
+
+    <div class="about-content"> 
+
+    <div class="about-details">
+        <p>
+            <strong>Symphony Violinist</strong><br>
+            Over 3500 concerts during my  career
+            in the music business.
+        </p>
+        <p>
+            <strong>Studio Work</strong><br>
+            Recording and studio work with some of the biggest
+            names in the industry.
+        </p>
+
+        <p>
+            <strong>Teaching</strong><br>
+            Many years of private teaching, developing and
+            mentoring accomplished students.
+        </p>
+
+        <p>
+            <strong>Beyond Music</strong><br>
+            An avid interest in scuba diving, football,
+            board games, computer coding, and cooking!
+        </p>
+    </div>
+    <img src="images/Brian-prof2.webp" alt="Profile photo" class="profile-photo">
+    </div>
+
+</section>
+
+<section id="about" class="about-section">
+<div class="about-content">
+<img src="images/Brian-prof1.webp" alt="Profile photo" class="profile-photo1">
+<h2 class="section-title">About Me  🎻</h2>
+</div>
+
+<div class="career-section">
+    <h3>Orchestral Career</h3>
+
+    <p>
+        Born in Canada, upon graduation from McGill University, I have had
+        two major orchestra employments: 1st violinist with the Vancouver
+        Symphony & Malaysian Philharmonic Orchestra, performing in over
+        3500 concerts, working with conductors such as Charles Dutoit,
+        Lorin Maazel, Kazuyoshi Akiyama, Andrew Litton, and guest artists
+        Rostropovich, Yo-Yo Ma, Pinchas Zukerman, Gil Shaham, Steven
+        Isserlis, Isaac Stern, Nigel Kennedy, and others.
+    </p>
+
+    <p>
+        I have been acting as Concertmaster for the Selangor Symphony
+        Orchestra since its inception in 2015.
+    </p>
+</div>
+
+<div class="collaboration-section">
+    <h3>Rock, Pop & Contemporary Collaborations</h3>
+
+    <p>
+        Studio backing tracks, and live appearances:
+    </p>
+
+    <p>
+        <strong>Canada:</strong>
+        Nickelback, Chad Kroeger, Bryan Adams, Theory of a Deadman, Spirit of the West, Shania Twain, Our Lady Peace, Matthew Good Band, Jann Arden, Celine Dion.
+    </p>
+
+    <p>
+        <strong>USA / Europe:</strong>
+        Smokey Robinson, Natalie Cole, YES, The Cranberries, The Moody Blues, America, Andrea Bocelli,
+        Sarah Brightman.
+    </p>
+
+    <p>
+        <strong>Asia:</strong>
+        Eason Chan, Siti Nurhaliza, Dayang Nurfaizah, Misha Omar, Aina Abdul, Anuar Zain,
+        Ziana Zain, Hael Husaini, Ernie Zakri, Syamel, Taufik Batisah,
+        Hafiz Suip.
+    </p>
+</div>
+
+<div id="media" class="video-section">
+    <br>
+    <h3>Performances & Collaborations</h3>
+
+    <p class="video-intro">
+    Click on the YouTube links to view performances
+    and recordings:
+    </p>
+
+    <div class="video-links">
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/watch?v=sUjXbH-2LGw"
+           target="_blank">
+            <span class="video-title">Hero  🎵</span>
+            <span class="video-description">
+                Strings written and recorded, Brian Larson: for Chad Kroeger's
+                "Hero", used in Spider-Man.
+            </span>
+        </a>
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/watch?v=onZuy5zYOiY&list=RDonZuy5zYOiY&start_radio=1"
+           target="_blank">
+            <span class="video-title">The Last Song  🎵</span>
+            <span class="video-description">
+                Another string quartet arrangement, written for Theory of a Deadman.
+            </span>
+        </a>
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/watch?v=j4y-RzVGrHg"
+           target="_blank">
+            <span class="video-title">Far Away for Far Too Long  🎵</span>
+            <span class="video-description">
+                String parts I have written for another Nickelback recording.
+            </span>
+        </a>
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/watch?v=blaFZbgfazM"
+           target="_blank">
+            <span class="video-title">EHQ: Eleanor Rigby  🎵</span>
+            <span class="video-description">
+                Here is an example of my string quartet arrangements.
+            </span>
+        </a>
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/watch?v=t7xbtbqiE6I"
+           target="_blank">
+            <span class="video-title">Flower Duet, Delibes  🎵</span>
+            <span class="video-description">
+                This is another arrangement, string quartet, from Opera repertoire.
+            </span>
+        </a>
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/video/4tft2LBWce0/edit"
+           target="_blank">
+            <span class="video-title">AYO 2015: Dvorak Quintet  🎵</span>
+            <span class="video-description">
+                Quintet Performance: Asian Youth Orchestra faculty, 
+                2015, Hong Kong.
+            </span>
+        </a>
+
+        <a class="youtube-link"
+           href="https://www.youtube.com/video/-j9B5V4mjk4/edit"
+           target="_blank">
+            <span class="video-title">BL: Memorial  🎵</span>
+            <span class="video-description">
+                This is an original piece I wrote for two violins.
+            </span>
+        </a>
+
+    </div>
+</div>
+
+</section>
+
+
+<section id="resume" class="resume-section"> <h2 class="section-title">Biography</h2>
+
+<div class="resume-grid">
+
+    <div class="resume-box">
+        <h3>Education</h3>
+        <ul>
+            <li>B.Music, McGill University, Montreal — High Distinction</li>
+            <li>Studies with renowned professors Mauricio Fuks and Gwen Thompson</li>
+            <li>Full scholarship to Master's Degree at the University of Montreal</li>
+        </ul>
+    </div>
+
+    <div class="resume-box">
+        <h3>Orchestral Career</h3>
+        <ul>
+            <li>Full-time with Vancouver Symphony Orchestra, fr. 1989</li>
+            <li>Full-time with Malaysian Philharmonic Orchestra, fr. 2003</li>
+            <li>Guest engagements with Montreal Symphony, Macao Orchestra, Hanoi Sun Symphony, Concertmaster for Selangor Symphony</li>
+        </ul>
+    </div>
+
+    <div class="resume-box">
+        <h3>Studio & Recording</h3>
+        <ul>
+            <li>Regular recording-session violinist in Vancouver's major studios.</li>
+            <li>Sound-tracks for Disney movies and major artist CDs.</li>
+            <li>Featured on tracks with Bryan Adams, The Cranberries,
+                Spirit of the West, Our Lady Peace, Theory of a Deadman,
+                Chad Kroeger, Nickelback and Mötley Crüe</li>
+            <li>Two solo CD releases as "Encore Duo" in 1999 and 2000</li>
+        </ul>
+    </div>
+
+    <div class="resume-box">
+        <h3>Arranging & Teaching</h3>
+        <ul>
+            <li>String quartet arranger for Nickelback, Chad Kroeger
+                and Theory of a Deadman</li>
+            <li>Adjudicator and instructor at festivals throughout
+                Southeast Asia</li>
+            <li>Highly successful violin instructor in Malaysia,
+                producing multiple competition-winning players</li>
+        </ul>
+    </div>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact-section"> <h2 class="section-title">Contact</h2>
+
+<div class="contact-info">
+    <a href="mailto:brian.larson.violin@gmail.com">
+        brian.larson.violin@gmail.com
+    </a>
+
+    <a href="https://wa.me/60172070065" target="_blank">
+        WhatsApp: +60 17 207 0065
+    </a>
+</div>
+
+<div class="social-logos">
+    <a href="https://www.facebook.com/brian.violin/" target="_blank">
+        <img src="images/Facebook_Logo_Primary.webp" alt="Facebook">
+    </a>
+
+    <a href="https://www.linkedin.com/in/brian-larson-b8828726/" target="_blank">
+        <img src="images/LI-In-Bug.webp" alt="LinkedIn">
+    </a>
+
+    <a href="https://www.youtube.com/channel/UCVQ14EPJeuV1QrryMixRIZg/" target="_blank">
+        <img src="images/yt-external-thumbnail-icon-01.webp" alt="YouTube">
+    </a>
+
+    <a href="https://instagram.com/brianlarsonviolin" target="_blank">
+        <img src="images/Instagram_Glyph_Black.webp" alt="Instagram">
+    </a>
+
+    <a href="https://blviolin99.github.io" target="_blank">
+        <img src="images/github_PNG80.png" alt="Github">
+    </a>
+</div> 
+
+</section>
+</body>
+</html>
